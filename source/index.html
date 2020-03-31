@@ -5,8 +5,115 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+    <header class="header">
+      <nav class="header__navigation">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--active" href="">Главная</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="./photo.html">Фото и видео</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="./form.html">Форма отзыва</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="">HTML academy</a>
+          </li>
+        </ul>
+        <button class="header__button" type="button">
+          <span class="header__button-line"></span>
+          <span class="header__button-line"></span>
+          <span class="header__button-line"></span>
+        </button>
+        <a class="header__logo" aria-label="Логотип Седоны"></a>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="index-banner">
+        <h2 class="visually-hidden">Баннер</h2>
+        <img class="index-banner__image" src="https://via.placeholder.com/320x390" alt="Виды Седоны">
+      </section>
+      <section class="advantages">
+        <div class="advantages__headline">
+          <h1 class="advantages__title">Седона — небольшой городок в Aризоне, заслуживающий большего!</h1>
+          <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </div>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--with-photo">
+            <div class="advantages__card advantages-card">
+              <h2 class="advantages-card__title">Настоящий городок</h2>
+              <span class="advantages-card__number">— №1 —</span>
+              <p class="advantages-card__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+            <img class="advantages-card__image" src="https://via.placeholder.com/320x260" alt="Вид улицы Седоны">
+            <ul class="advantages__additional">
+              <li class="advantages__additional-item">
+                <h2 class="advantages__additional-title">Жилье</h2>
+                <p class="advantages__additional-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              </li>
+              <li class="advantages__additional-item">
+                <h2 class="advantages__additional-title">Сувениры</h2>
+                <p class="advantages__additional-text">Не только китайского, но и местного производства!</p>
+              </li>
+              <li class="advantages__additional-item">
+                <h2 class="advantages__additional-title">Еда</h2>
+                <p class="advantages__additional-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+            </ul>
+          </li>
+          <li class="advantages__item advantages__item--with-photo">
+            <div class="advantages__card advantages-card">
+              <h2 class="advantages-card__title">Там есть мост дьявола</h2>
+              <span class="advantages-card__number">— №2 —</span>
+              <p class="advantages-card__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            </div>
+            <img class="advantages-card__image" src="https://via.placeholder.com/320x260" alt="Мост дьявола в Седоне">
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__card advantages-card">
+              <h2 class="advantages-card__title">Небольшая площадь</h2>
+              <span class="advantages-card__number">— №3 —</span>
+              <p class="advantages-card__text">Все интересные места находятся очень близко</p>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__card advantages-card">
+              <h2 class="advantages-card__title">Небольшая площадь</h2>
+              <span class="advantages-card__number">— №3 —</span>
+              <p class="advantages-card__text">Все интересные места находятся очень близко</p>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__card advantages-card">
+              <h2 class="advantages-card__title">Красивая дорога</h2>
+              <span class="advantages-card__number">— №4 —</span>
+              <p class="advantages-card__text">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__card advantages-card">
+              <h2 class="advantages-card__title">Мало туристов</h2>
+              <span class="advantages-card__number">— №5 —</span>
+              <p class="advantages-card__text">Большинство едет в гранд каньон и толпится там</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__contacts">
+        <a class="footer__contact-link" href="">#visitSEDONA</a>
+      </p>
+      <ul class="footer__socials">
+        <li><a class="footer__social-link" href="" aria-label="Твиттер"></a></li>
+        <li><a class="footer__social-link" href="" aria-label="Фейсбук"></a></li>
+        <li><a class="footer__social-link" href="" aria-label="Ютуб"></a></li>
+      </ul>
+      <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <span class="footer__dev-text">Разработано</span>
+        <img class="footer__dev-icon" alt="Логотип html academy" src="https://via.placeholder.com/27x34">
+      </a>
+    </footer>
   </body>
 </html>
