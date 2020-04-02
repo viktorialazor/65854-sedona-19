@@ -7,18 +7,18 @@
   <body>
     <header class="header">
       <nav class="header__navigation">
-        <ul class="header__menu">
-          <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link--active" href="">Главная</a>
+        <ul class="header__menu navigation">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--active" href="">Главная</a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="./photo.html">Фото и видео</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./photo.html">Фото и видео</a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="./form.html">Форма отзыва</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./form.html">Форма отзыва</a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="">HTML academy</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="">HTML academy</a>
           </li>
         </ul>
         <button class="header__button" type="button">
@@ -35,9 +35,9 @@
         <img class="index-banner__image" src="https://via.placeholder.com/320x390" alt="Виды Седоны">
       </section>
       <section class="advantages">
-        <div class="advantages__headline">
-          <h1 class="advantages__title">Седона — небольшой городок в Aризоне, заслуживающий большего!</h1>
-          <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <div class="advantages__headline headline">
+          <h1 class="headline__title">Седона — небольшой городок в Aризоне, заслуживающий большего!</h1>
+          <p class="headline__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </div>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--with-photo">
@@ -100,19 +100,31 @@
           </li>
         </ul>
       </section>
+      <section class="search-hotel">
+        <div class="search-hotel__headline headline">
+          <h2 class="visually-hidden">Запрос для брони гостиницы</h2>
+          <span class="headline__title">Заинтересовались?</span>
+          <p class="headline__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        </div>
+        <a class="search-hotel__button button" href="">Найти гостиницу</a>
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Карта Седоны</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3352651.364153731!2d-113.89627325396245!3d34.854378000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1585841441630!5m2!1sru!2sua" width="320" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </section>
     </main>
     <footer class="footer">
-      <p class="footer__contacts">
-        <a class="footer__contact-link" href="">#visitSEDONA</a>
+      <p class="footer__contacts contacts">
+        <a class="contacts__link" href="">#visitSEDONA</a>
       </p>
-      <ul class="footer__socials">
-        <li><a class="footer__social-link" href="" aria-label="Твиттер"></a></li>
-        <li><a class="footer__social-link" href="" aria-label="Фейсбук"></a></li>
-        <li><a class="footer__social-link" href="" aria-label="Ютуб"></a></li>
+      <ul class="footer__socials socials">
+        <li><a class="socials__link" href="" aria-label="Твиттер"></a></li>
+        <li><a class="socials__link" href="" aria-label="Фейсбук"></a></li>
+        <li><a class="socials__link" href="" aria-label="Ютуб"></a></li>
       </ul>
-      <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <span class="footer__dev-text">Разработано</span>
-        <img class="footer__dev-icon" alt="Логотип html academy" src="https://via.placeholder.com/27x34">
+      <a class="footer__dev dev" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <span class="dev__text">Разработано</span>
+        <img class="dev__icon" alt="Логотип html academy" src="https://via.placeholder.com/27x34">
       </a>
     </footer>
   </body>
