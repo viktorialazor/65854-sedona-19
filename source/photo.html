@@ -9,13 +9,13 @@
       <nav class="header__navigation">
         <ul class="header__menu navigation">
           <li class="navigation__item">
-            <a class="navigation__link" href="./index.html">Главная</a>
+            <a class="navigation__link" href="index.html">Главная</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link navigation__link--active" href="">Фото и видео</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="./form.html">Форма отзыва</a>
+            <a class="navigation__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="">HTML academy</a>
@@ -79,8 +79,11 @@
           <h1 class="headline__title">Все еще сомневаетесь?</h1>
           <p class="headline__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <!-- Как нужно делать  этот   блок, через тег  video или img? -->
-        <img class="video__image" src="https://via.placeholder.com/320x200" alt="Виды Седоны">
+        <video width="320" height="200" controls="controls" poster="">
+          <source src="video/sedona.ogv" type="video/ogg">
+          <source src="video/sedona.mp4" type="video/mp4">
+          <source src="video/sedona.webm" type="video/webm">
+        </video>
       </section>
     </main>
     <footer class="footer">
@@ -92,9 +95,9 @@
         <li><a class="socials__link" href="" aria-label="Фейсбук"></a></li>
         <li><a class="socials__link" href="" aria-label="Ютуб"></a></li>
       </ul>
-      <a class="footer__dev dev" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <span class="dev__text">Разработано</span>
-        <img class="dev__icon" alt="Логотип html academy" src="https://via.placeholder.com/27x34">
+      <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <span class="footer__dev-text">Разработано</span>
+        <img class="footer__dev-icon" alt="Логотип HTML Academy" src="https://via.placeholder.com/27x34">
       </a>
     </footer>
   </body>
