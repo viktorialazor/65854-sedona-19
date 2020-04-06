@@ -7,18 +7,18 @@
   <body>
     <header class="header">
       <nav class="header__navigation">
-        <ul class="header__menu">
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="./index.html">Главная</a>
+        <ul class="header__menu navigation">
+          <li class="navigation__item">
+            <a class="navigation__link" href="index.html">Главная</a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link--active" href="">Фото и видео</a>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--active" href="">Фото и видео</a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="./form.html">Форма отзыва</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="form.html">Форма отзыва</a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="">HTML academy</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="">HTML academy</a>
           </li>
         </ul>
         <button class="header__button" type="button">
@@ -35,9 +35,9 @@
         <img class="inner-banner__image" src="https://via.placeholder.com/320x160" alt="Виды Седоны">
       </section>
       <section class="photos">
-        <div class="photos__headline">
-          <h1 class="photos__title">Фото и видео</h1>
-          <p class="photos__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        <div class="photos__headline headline">
+          <h1 class="headline__title">Фото и видео</h1>
+          <p class="headline__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         </div>
         <ul class="photos__list">
           <li class="photos__item">
@@ -74,19 +74,30 @@
           </li>
         </ul>
       </section>
+      <section class="video">
+        <div class="video__headline headline">
+          <h1 class="headline__title">Все еще сомневаетесь?</h1>
+          <p class="headline__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
+        <video width="320" height="200" controls="controls" poster="">
+          <source src="video/sedona.ogv" type="video/ogg">
+          <source src="video/sedona.mp4" type="video/mp4">
+          <source src="video/sedona.webm" type="video/webm">
+        </video>
+      </section>
     </main>
     <footer class="footer">
-      <p class="footer__contacts">
-        <a class="footer__contact-link" href="">#visitSEDONA</a>
+      <p class="footer__contacts contacts">
+        <a class="contacts__link" href="">#visitSEDONA</a>
       </p>
-      <ul class="footer__socials">
-        <li><a class="footer__social-link" href="" aria-label="Твиттер"></a></li>
-        <li><a class="footer__social-link" href="" aria-label="Фейсбук"></a></li>
-        <li><a class="footer__social-link" href="" aria-label="Ютуб"></a></li>
+      <ul class="footer__socials socials">
+        <li><a class="socials__link" href="" aria-label="Твиттер"></a></li>
+        <li><a class="socials__link" href="" aria-label="Фейсбук"></a></li>
+        <li><a class="socials__link" href="" aria-label="Ютуб"></a></li>
       </ul>
       <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="footer__dev-text">Разработано</span>
-        <img class="footer__dev-icon" alt="Логотип html academy" src="https://via.placeholder.com/27x34">
+        <img class="footer__dev-icon" alt="Логотип HTML Academy" src="https://via.placeholder.com/27x34">
       </a>
     </footer>
   </body>
