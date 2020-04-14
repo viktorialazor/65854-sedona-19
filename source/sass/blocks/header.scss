@@ -1,0 +1,90 @@
+.header {
+  position: relative;
+
+  background-color: $white;
+}
+
+.header__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+
+  display: block;
+  margin-left: auto;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.header__button-line {
+  display: block;
+  width: 23px;
+  height: 4px;
+
+  background-color: $blue-1;
+
+  transition: background-color 0.3s;
+
+  & + & {
+    margin-top: 4px;
+  }
+
+  .header__button:hover &,
+  .header__button:focus & {
+    background-color: rgba($blue-1, 0.6);
+  }
+
+  .header__button--active & {
+    background-color: $white;
+  }
+
+  .header__button--active &:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .header__button--active &:nth-child(2) {
+    transform: rotateY(90deg);
+  }
+
+  .header__button--active &:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .header__button--active:hover &,
+  .header__button--active:focus & {
+    background-color: rgba($white, 0.6);
+  }
+
+  .header__button--active:active & {
+    background-color: rgba($white, 0.3);
+  }
+}
+
+.header__logo {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 102px;
+  height: 83px;
+  margin-right: auto;
+  margin-bottom: -25px;
+  margin-left: auto;
+
+  background: url('../../img/logo-sedona-mobile.svg') no-repeat center;
+  background-size: 102px 83px;
+
+  &:focus {
+    outline: 2px dashed $blue-1;
+  }
+}

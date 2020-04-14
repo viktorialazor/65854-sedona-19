@@ -1,0 +1,20 @@
+.headline {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  text-align: center;
+}
+
+.headline__title {
+  margin-top: 0;
+
+  @include font();
+}
+
+.headline__text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  line-height: 26px;
+  color: $gray-6;
+}

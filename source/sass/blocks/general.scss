@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  font-family: $font-family;
+  text-transform: uppercase;
+  color: $black;
+
+  background-color: $gray-1;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

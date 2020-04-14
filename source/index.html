@@ -2,12 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
   </head>
-  <body>
+  <body class="container">
     <header class="header">
       <nav class="header__navigation">
-        <ul class="header__menu navigation">
+        <ul class="header__menu navigation js-navigation">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--active" href="">Главная</a>
           </li>
@@ -21,7 +24,7 @@
             <a class="navigation__link" href="">HTML academy</a>
           </li>
         </ul>
-        <button class="header__button" type="button">
+        <button class="header__button js-menu-button" type="button">
           <span class="header__button-line"></span>
           <span class="header__button-line"></span>
           <span class="header__button-line"></span>
@@ -32,7 +35,9 @@
     <main class="main">
       <section class="index-banner">
         <h2 class="visually-hidden">Баннер</h2>
-        <img class="index-banner__image" src="https://via.placeholder.com/320x390" alt="Виды Седоны">
+        <div class="index-banner__image-wrapper">
+          <img class="index-banner__image" src="./img/bg-back-mobile@1x.jpg" width="768" height="389" alt="Виды Седоны">
+        </div>
       </section>
       <section class="advantages">
         <div class="advantages__headline headline">
@@ -41,7 +46,7 @@
         </div>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--with-photo">
-            <div class="advantages__card advantages-card">
+            <div class="advantages__card advantages-card advantages-card--invert">
               <h2 class="advantages-card__title">Настоящий городок</h2>
               <span class="advantages-card__number">— №1 —</span>
               <p class="advantages-card__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -49,33 +54,26 @@
             <img class="advantages-card__image" src="https://via.placeholder.com/320x260" alt="Вид улицы Седоны">
             <ul class="advantages__additional">
               <li class="advantages__additional-item">
-                <h2 class="advantages__additional-title">Жилье</h2>
+                <h2 class="advantages__additional-title advantages__additional-title--house">Жилье</h2>
                 <p class="advantages__additional-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="advantages__additional-item">
-                <h2 class="advantages__additional-title">Сувениры</h2>
+                <h2 class="advantages__additional-title advantages__additional-title--gift">Сувениры</h2>
                 <p class="advantages__additional-text">Не только китайского, но и местного производства!</p>
               </li>
               <li class="advantages__additional-item">
-                <h2 class="advantages__additional-title">Еда</h2>
+                <h2 class="advantages__additional-title advantages__additional-title--burger">Еда</h2>
                 <p class="advantages__additional-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
             </ul>
           </li>
           <li class="advantages__item advantages__item--with-photo">
-            <div class="advantages__card advantages-card">
+            <div class="advantages__card advantages-card advantages-card--invert">
               <h2 class="advantages-card__title">Там есть мост дьявола</h2>
               <span class="advantages-card__number">— №2 —</span>
               <p class="advantages-card__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <img class="advantages-card__image" src="https://via.placeholder.com/320x260" alt="Мост дьявола в Седоне">
-          </li>
-          <li class="advantages__item">
-            <div class="advantages__card advantages-card">
-              <h2 class="advantages-card__title">Небольшая площадь</h2>
-              <span class="advantages-card__number">— №3 —</span>
-              <p class="advantages-card__text">Все интересные места находятся очень близко</p>
-            </div>
           </li>
           <li class="advantages__item">
             <div class="advantages__card advantages-card">
@@ -110,7 +108,7 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта Седоны</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3352651.364153731!2d-113.89627325396245!3d34.854378000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1585841441630!5m2!1sru!2sua" width="320" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3352651.364153731!2d-113.89627325396245!3d34.854378000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1585841441630!5m2!1sru!2sua" width="100%" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
     </main>
     <footer class="footer">
@@ -118,14 +116,18 @@
         <a class="contacts__link" href="">#visitSEDONA</a>
       </p>
       <ul class="footer__socials socials">
-        <li><a class="socials__link" href="" aria-label="Твиттер"></a></li>
-        <li><a class="socials__link" href="" aria-label="Фейсбук"></a></li>
-        <li><a class="socials__link" href="" aria-label="Ютуб"></a></li>
+        <li><a class="socials__link socials__link--tw" href="" aria-label="Твиттер"></a></li>
+        <li><a class="socials__link socials__link--fb" href="" aria-label="Фейсбук"></a></li>
+        <li><a class="socials__link socials__link--yt" href="" aria-label="Ютуб"></a></li>
       </ul>
       <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="footer__dev-text">Разработано</span>
-        <img class="footer__dev-icon" alt="Логотип HTML Academy" src="https://via.placeholder.com/27x34">
+        <svg class="footer__dev-svg" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34">
+          <defs/>
+          <path fill="currentColor" d="M13.65 0h-.15L0 1.41V26l13.5 8L27 26V1.41zm11.42 12.09L13.52 5.32v-.1h-.09l-.08-.06v.11L1.93 12.09V3.14L13.5 1.93l11.57 1.21v9zM13.43 6.77L25 13.46l-4.51 2.64-7.11-4.21v1.41l5.92 3.5-.86.51-5-3v1.42L17.2 18l-.78.53-3-1.79v1.41l1.86 1.09-1.8 1.08L2 13.59zm-11.5 8.32l11.43 6.77v1l-8-4.71v1.45l8 4.78v1.07l-8-4.72v1.41l8 4.81h.05l8.16-4.86V17l3.42-2v10L13.5 31.77 1.93 24.91z"/>
+        </svg>
       </a>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

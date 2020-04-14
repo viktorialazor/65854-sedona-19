@@ -1,0 +1,74 @@
+.navigation {
+  position: absolute;
+  z-index: 1;
+
+  display: block;
+  visibility: hidden;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  list-style: none;
+
+  opacity: 0;
+
+  transition: opacity 0.6s;
+
+  &--show {
+    position: initial;
+
+    visibility: visible;
+
+    opacity: 1;
+  }
+
+  &--hide {
+    position: absolute;
+
+    visibility: hidden;
+  }
+}
+
+.navigation__link {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+
+  @include font($lh: 40px);
+  text-align: center;
+  color: $white;
+
+  background-color: $blue-1;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $blue-2;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    background-color: $blue-3;
+  }
+
+  &--active {
+    color: $brown-1;
+  }
+
+  &--active:hover,
+  &--active:focus {
+    color: $brown-2;
+  }
+
+  &--active:active {
+    color: rgba($brown-1, 0.3);
+  }
+}

@@ -1,0 +1,28 @@
+.contacts {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  text-align: center;
+}
+
+.contacts__link {
+
+  @include font($fz: 21px);
+  color: $black;
+
+  transition: color 0.3s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue-1;
+  }
+
+  &:active {
+    color: rgba($black, 0.3);
+  }
+}

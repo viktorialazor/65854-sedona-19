@@ -1,0 +1,21 @@
+.search-hotel {
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  background-color: $white;
+}
+
+.search-hotel__headline {
+  margin-bottom: 40px;
+}
+
+.search-hotel .headline__title {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.search-hotel__button {
+  width: calc(100% - 40px);
+  margin-right: auto;
+  margin-left: auto;
+}
