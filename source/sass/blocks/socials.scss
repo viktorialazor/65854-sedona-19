@@ -19,9 +19,9 @@
 
   background-color: $blue-1;
 
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,12 +30,12 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    transition: opacity .3s;
+    transition: opacity 0.3s;
 
     content: "";
   }
 
-  &--tw:before {
+  &--tw::before {
     width: 18px;
     height: 14px;
 
@@ -43,7 +43,7 @@
     background-size: 18px 14px;
   }
 
-  &--fb:before {
+  &--fb::before {
     width: 9px;
     height: 18px;
 
@@ -51,7 +51,7 @@
     background-size: 9px 18px;
   }
 
-  &--yt:before {
+  &--yt::before {
     width: 20px;
     height: 14px;
 
@@ -72,7 +72,7 @@
     background-color: $blue-3;
   }
 
-  &:active:before {
+  &:active::before {
     opacity: 0.3;
   }
 }

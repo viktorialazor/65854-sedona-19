@@ -10,7 +10,9 @@
 
 html {
   line-height: 1.15; /* 1 */
+  /* stylelint-disable */
   -webkit-text-size-adjust: 100%; /* 2 */
+  /* stylelint-enable */
 }
 
 /* Sections
@@ -62,7 +64,9 @@ hr {
  */
 
 pre {
+  /* stylelint-disable */
   font-family: monospace, monospace; /* 1 */
+  /* stylelint-enable */
   font-size: 1em; /* 2 */
 }
 
@@ -85,7 +89,9 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
+  /* stylelint-disable */
   text-decoration: underline dotted; /* 2 */
+  /* stylelint-enable */
 }
 
 /**
@@ -105,7 +111,9 @@ strong {
 code,
 kbd,
 samp {
+  /* stylelint-disable */
   font-family: monospace, monospace; /* 1 */
+  /* stylelint-enable */
   font-size: 1em; /* 2 */
 }
 
@@ -196,7 +204,9 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  /* stylelint-disable */
   -webkit-appearance: button;
+  /* stylelint-enable */
 }
 
 /**
@@ -288,7 +298,9 @@ textarea {
  */
 
 [type="search"] {
+  /* stylelint-disable */
   -webkit-appearance: textfield; /* 1 */
+  /* stylelint-enable */
   outline-offset: -2px; /* 2 */
 }
 
@@ -297,7 +309,9 @@ textarea {
  */
 
 [type="search"]::-webkit-search-decoration {
+  /* stylelint-disable */
   -webkit-appearance: none;
+  /* stylelint-enable */
 }
 
 /**
@@ -306,7 +320,9 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
+  /* stylelint-disable */
   -webkit-appearance: button; /* 1 */
+  /* stylelint-enable */
   font: inherit; /* 2 */
 }
 

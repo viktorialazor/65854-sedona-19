@@ -9,7 +9,7 @@
 
   padding-bottom: 30px;
 
-  &:after {
+  &::after {
     position: absolute;
     bottom: -20px;
     left: 0;
@@ -71,7 +71,7 @@
 
   @include font();
 
-  &:before {
+  &::before {
     position: absolute;
     top: 25%;
     left: -50px;
@@ -87,17 +87,17 @@
   }
 }
 
-.advantages__additional-title--house:before {
+.advantages__additional-title--house::before {
   background-image: url("../../img/icon-house.svg");
   background-size: 39px 37px;
 }
 
-.advantages__additional-title--gift:before {
+.advantages__additional-title--gift::before {
   background-image: url("../../img/icon-gift.svg");
   background-size: 32px 38px;
 }
 
-.advantages__additional-title--burger:before {
+.advantages__additional-title--burger::before {
   background-image: url("../../img/icon-burger.svg");
   background-size: 40px 35px;
 }
