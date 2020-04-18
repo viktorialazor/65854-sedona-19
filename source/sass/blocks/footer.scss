@@ -1,12 +1,14 @@
 .footer {
+  background-color: $white;
+}
+
+.footer__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding-top: 30px;
   padding-bottom: 25px;
-
-  background-color: $white;
 }
 
 .footer__dev {
@@ -29,11 +31,11 @@
 }
 
 .footer__dev-svg {
-  transition: color 0.3s;
+  transition: color $transition-time;
 
   .footer__dev:hover &,
   .footer__dev:focus & {
-    color: $blue-1;
+    color: $light-blue;
   }
 
   .footer__dev:active & {

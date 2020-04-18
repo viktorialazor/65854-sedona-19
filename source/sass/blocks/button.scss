@@ -1,26 +1,28 @@
 .button {
-  display: block;
+  @include font($fz: 21px);
+
+  display: inline-block;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
 
-  @include font($fz: 21px);
   font-family: $font-family;
   text-align: center;
+  vertical-align: middle;
   text-transform: uppercase;
   color: $white;
 
-  background-color: $blue-1;
+  background-color: $light-blue;
   border: none;
 
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color $transition-time, color $transition-time;
 
   appearance: none;
 
   &:hover,
   &:focus {
-    background-color: $blue-2;
+    background-color: $blue;
   }
 
   &:focus {
@@ -30,11 +32,11 @@
   &:active {
     color: rgba($white, 0.3);
 
-    background-color: $blue-3;
+    background-color: $dark-blue;
   }
 
   &:disabled,
   &--disabled {
-    background-color: $gray-3;
+    background-color: $gray;
   }
 }

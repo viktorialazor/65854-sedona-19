@@ -6,9 +6,9 @@
 }
 
 .headline__title {
-  margin-top: 0;
-
   @include font();
+
+  margin-top: 0;
 }
 
 .headline__text {
@@ -16,5 +16,5 @@
   margin-bottom: 0;
 
   line-height: 26px;
-  color: $gray-6;
+  color: $darkest-gray;
 }

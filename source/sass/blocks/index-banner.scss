@@ -1,5 +1,9 @@
 .index-banner {
-  background-color: $blue-1;
+  background-color: $light-blue;
+}
+
+.index-banner__inner {
+  width: 100%;
 }
 
 .index-banner__image-wrapper {
@@ -9,14 +13,13 @@
 
   &::before,
   &::after {
+    content: "";
     position: absolute;
 
     height: 100%;
 
     background-repeat: no-repeat;
     background-position: center;
-
-    content: "";
   }
 
   &::before {
@@ -25,7 +28,7 @@
 
     width: 100%;
 
-    background-image: url("../../img/bg-intro-triangle-mobile.svg");
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-size: cover;
   }
 
@@ -37,7 +40,7 @@
     width: calc(100% - 40px);
     max-width: 460px;
 
-    background-image: url("../../img/text-sedona-index.svg");
+    background-image: url("../img/text-sedona-index.svg");
     background-size: contain;
   }
 }

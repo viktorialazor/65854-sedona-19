@@ -3,20 +3,28 @@
 $white: #ffffff;
 $black: #000000;
 
-$blue-1: #81b3d2;
-$blue-2: #669ec0;
-$blue-3: #5496bd;
+$light-blue: #81b3d2;
+$blue: #669ec0;
+$dark-blue: #5496bd;
 
-$gray-1: #f2f2f2;
-$gray-2: #eeeeee;
-$gray-3: #e5e5e5;
-$gray-4: #d5d5d5;
-$gray-5: #5c6870;
-$gray-6: #333333;
+$lightest-gray: #f2f2f2;
+$light-gray: #eeeeee;
+$gray: #e5e5e5;
+$dark-gray: #d5d5d5;
+$darker-gray: #5c6870;
+$darkest-gray: #333333;
 
-$brown-1: #766357;
-$brown-2: #604e43;
+$brown: #766357;
+$dark-brown: #604e43;
 
 // Fonts
 
 $font-family: "PT Sans", arial, sans-serif;
+
+// Z-index
+
+$z-index: 1;
+
+// Transition
+
+$transition-time: 0.3s;

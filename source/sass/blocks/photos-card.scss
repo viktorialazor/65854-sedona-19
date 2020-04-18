@@ -1,7 +1,7 @@
 .photos-card {
   padding: 20px;
 
-  border-top: 1px solid $gray-3;
+  border-top: 1px solid $gray;
 }
 
 .photos-card__image {
@@ -22,7 +22,7 @@
   margin-bottom: 10px;
 
   line-height: 24px;
-  color: $gray-6;
+  color: $darkest-gray;
 }
 
 .photos-card__rating {
@@ -34,6 +34,7 @@
   font-weight: 700;
 
   &::before {
+    content: "";
     position: absolute;
     top: -4px;
     left: 0;
@@ -41,9 +42,7 @@
     width: 22px;
     height: 20px;
 
-    background: url("../../img/icon-like.svg") no-repeat center;
+    background: url("../img/icon-like.svg") no-repeat center;
     background-size: 22px 20px;
-
-    content: "";
   }
 }

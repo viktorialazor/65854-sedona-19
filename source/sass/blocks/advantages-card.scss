@@ -1,13 +1,10 @@
 .advantages-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   padding: 30px 20px;
 
-  color: $gray-6;
+  color: $darkest-gray;
 
-  background-color: $gray-2;
+  background-color: $light-gray;
 }
 
 .advantages-card--invert {
@@ -16,7 +13,7 @@
 
   color: $white;
 
-  background-color: $blue-1;
+  background-color: $light-blue;
 }
 
 .advantages__item:first-child .advantages-card {
@@ -28,13 +25,14 @@
 }
 
 .advantages-card__title {
+  @include font();
+
   margin-top: 0;
   margin-bottom: 15px;
-
-  @include font();
 }
 
 .advantages-card__number {
+  display: block;
   margin-bottom: 15px;
 }
 
@@ -60,6 +58,6 @@
   object-position: center;
 }
 
-.advantages__item:not(.advantages__item--with-photo):not(:last-child) .advantages__card {
-  border-bottom: 1px solid rgba($black, 0.1);
+.advantages__item:not(.advantages__item--with-photo) + .advantages__item {
+  border-top: 1px solid rgba($black, 0.1);
 }

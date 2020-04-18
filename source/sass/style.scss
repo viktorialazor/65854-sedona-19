@@ -3,8 +3,11 @@
 @import "blocks/normalize.scss";
 @import "blocks/general.scss";
 @import "blocks/visually-hidden.scss";
-@import "blocks/container.scss";
+@import "blocks/page.scss";
 @import "blocks/button.scss";
+@import "blocks/svg-icon.scss";
+@import "blocks/image-fluid.scss";
+@import "blocks/link.scss";
 @import "blocks/header.scss";
 @import "blocks/navigation.scss";
 @import "blocks/footer.scss";
@@ -15,6 +18,7 @@
 @import "blocks/advantages.scss";
 @import "blocks/advantages-card.scss";
 @import "blocks/search-hotel.scss";
+@import "blocks/map.scss";
 @import "blocks/inner-banner.scss";
 @import "blocks/photos.scss";
 @import "blocks/photos-card.scss";

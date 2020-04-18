@@ -17,11 +17,12 @@
   margin-right: 3px;
   margin-left: 3px;
 
-  background-color: $blue-1;
+  background-color: $light-blue;
 
-  transition: background-color 0.3s;
+  transition: background-color $transition-time;
 
   &::before {
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,16 +31,14 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    transition: opacity 0.3s;
-
-    content: "";
+    transition: opacity $transition-time;
   }
 
   &--tw::before {
     width: 18px;
     height: 14px;
 
-    background-image: url("../../img/icon-twitter.svg");
+    background-image: url("../img/icon-twitter.svg");
     background-size: 18px 14px;
   }
 
@@ -47,7 +46,7 @@
     width: 9px;
     height: 18px;
 
-    background-image: url("../../img/icon-facebook.svg");
+    background-image: url("../img/icon-facebook.svg");
     background-size: 9px 18px;
   }
 
@@ -55,7 +54,7 @@
     width: 20px;
     height: 14px;
 
-    background-image: url("../../img/icon-youtube.svg");
+    background-image: url("../img/icon-youtube.svg");
     background-size: 20px 14px;
   }
 
@@ -65,11 +64,11 @@
 
   &:hover,
   &:focus {
-    background-color: $blue-2;
+    background-color: $blue;
   }
 
   &:active {
-    background-color: $blue-3;
+    background-color: $dark-blue;
   }
 
   &:active::before {

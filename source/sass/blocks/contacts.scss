@@ -8,9 +8,10 @@
 
 .contacts__link {
   @include font($fz: 21px);
+
   color: $black;
 
-  transition: color 0.3s;
+  transition: color $transition-time;
 
   &:focus {
     outline: none;
@@ -18,7 +19,7 @@
 
   &:hover,
   &:focus {
-    color: $blue-1;
+    color: $light-blue;
   }
 
   &:active {

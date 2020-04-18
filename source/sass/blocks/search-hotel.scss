@@ -5,6 +5,10 @@
   background-color: $white;
 }
 
+.search-hotel__inner {
+  width: 100%;
+}
+
 .search-hotel__headline {
   margin-bottom: 40px;
 }
@@ -15,6 +19,7 @@
 }
 
 .search-hotel__button {
+  display: block;
   width: calc(100% - 40px);
   margin-right: auto;
   margin-left: auto;
