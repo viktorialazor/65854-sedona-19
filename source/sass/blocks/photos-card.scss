@@ -1,0 +1,48 @@
+.photos-card {
+  padding: 20px;
+
+  border-top: 1px solid $gray;
+}
+
+.photos-card__image {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+
+.photos-card__title {
+  margin-bottom: 10px;
+
+  line-height: 24px;
+}
+
+.photos-card__author {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  line-height: 24px;
+  color: $darkest-gray;
+}
+
+.photos-card__rating {
+  position: relative;
+
+  padding-left: 35px;
+
+  line-height: 24px;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+
+    width: 22px;
+    height: 20px;
+
+    background: url("../img/icon-like.svg") no-repeat center;
+    background-size: 22px 20px;
+  }
+}

@@ -1,0 +1,42 @@
+.button {
+  @include font($fz: 21px);
+
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-family: $font-family;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $light-blue;
+  border: none;
+
+  cursor: pointer;
+  transition: background-color $transition-time, color $transition-time;
+
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    background-color: $dark-blue;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $gray;
+  }
+}
