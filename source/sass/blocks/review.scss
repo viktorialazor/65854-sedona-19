@@ -1,0 +1,331 @@
+.review {
+  padding-top: 40px;
+
+  background-color: $white;
+}
+
+.review__headline {
+  padding-bottom: 20px;
+}
+
+.review__form {
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+
+.review__fieldset {
+  position: relative;
+
+  margin-right: 0;
+  margin-bottom: 25px;
+  margin-left: 0;
+  padding: 0 20px 25px;
+
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $gray;
+  }
+}
+
+.review__legend {
+  @include font();
+
+  margin-bottom: 25px;
+
+  text-align: center;
+
+  &--radio,
+  &--checkbox {
+    margin-bottom: 30px;
+  }
+
+  &--textarea {
+    margin-bottom: 20px;
+  }
+}
+
+.review__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.review__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &--column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &--radio:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  &--radio:last-child {
+    margin-bottom: 15px;
+  }
+
+  &--checkbox:not(:last-child) {
+    margin-bottom: 55px;
+  }
+
+  &--checkbox:last-child {
+    margin-bottom: 15px;
+  }
+}
+
+.review__input-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 58px;
+    height: 58px;
+
+    background-color: $light-gray;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    pointer-events: none;
+  }
+
+  &--tel::before {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 18px 18px;
+  }
+
+  &--mail::before {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 16px 16px;
+  }
+}
+
+.review__input,
+.review__textarea {
+  @include font();
+
+  width: 100%;
+
+  background-color: $lightest-gray;
+  border: 4px solid transparent;
+
+  transition: background-color $transition-time, border-color $transition-time;
+
+  &:hover {
+    background-color: $gray;
+  }
+
+  &:focus {
+    background-color: transparent;
+    border-color: $gray;
+    outline: none;
+  }
+}
+
+.review__input {
+  height: 58px;
+  padding: 0 15px;
+}
+
+.review__textarea {
+  min-height: 160px;
+  padding: 15px 20px;
+
+  resize: vertical;
+}
+
+.review__input::-webkit-input-placeholder,
+.review__textarea::-webkit-input-placeholder {
+  font-family: $font-family;
+  font-weight: 700;
+  line-height: 26px;
+
+  color: $black;
+}
+
+.review__input:-ms-input-placeholder,
+.review__textarea:-ms-input-placeholder {
+  font-family: $font-family;
+  font-weight: 700;
+  line-height: 26px;
+
+  color: $black;
+}
+
+.review__input::-ms-input-placeholder,
+.review__textarea::-ms-input-placeholder {
+  font-family: $font-family;
+  font-weight: 700;
+  line-height: 26px;
+
+  color: $black;
+}
+
+.review__input::placeholder,
+.review__textarea::placeholder {
+  font-family: $font-family;
+  font-weight: 700;
+  line-height: 26px;
+
+  color: $black;
+}
+
+.review__label {
+  margin-right: 15px;
+
+  color: $darkest-gray;
+
+  &--reverse {
+    order: -1;
+  }
+}
+
+.review__item--column .review__label--reverse {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.review__label--radio {
+  @include font();
+
+  position: relative;
+
+  padding-left: 80px;
+
+  text-transform: initial;
+
+  &::before,
+  .review__radio:checked + &::after {
+    content: "";
+    position: absolute;
+
+    border-radius: 50%;
+
+    transition: background-color $transition-time;
+  }
+
+  &::before {
+    top: calc(50% - 28px);
+    left: 0;
+
+    width: 56px;
+    height: 56px;
+
+    background-color: $lightest-gray;
+  }
+
+  .review__radio:checked + &::after {
+    top: calc(50% - 10px);
+    left: 18px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: $darkest-gray;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $gray;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active::before {
+    background-color: $dark-gray;
+  }
+
+  .review__radio:checked + &:active::after {
+    background-color: rgba($darkest-gray, 0.3);
+  }
+}
+
+.review__label--checkbox {
+  @include font();
+
+  position: relative;
+
+  padding-left: 80px;
+
+  text-transform: initial;
+
+  &::before,
+  .review__checkbox:checked + &::after {
+    content: "";
+    position: absolute;
+
+    transition: background-color $transition-time;
+  }
+
+  &::before {
+    top: calc(50% - 28px);
+    left: 0;
+
+    width: 56px;
+    height: 56px;
+
+    background-color: $lightest-gray;
+    border-radius: 4px;
+  }
+
+  .review__checkbox:checked + &::after {
+    top: calc(50% - 8px);
+    left: 16px;
+
+    width: 24px;
+    height: 16px;
+
+    background: url("../img/icon-tick.svg") no-repeat center;
+
+    transition: opacity $transition-time;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $gray;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active::before {
+    background-color: $dark-gray;
+  }
+
+  .review__checkbox:checked + &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.review__button {
+  display: block;
+  width: calc(100% - 40px);
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -12,9 +12,10 @@
 }
 
 .headline__text {
+  @include font($fz: 14px, $fw: 400);
+
   margin-top: 0;
   margin-bottom: 0;
 
-  line-height: 26px;
   color: $darkest-gray;
 }

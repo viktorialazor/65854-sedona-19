@@ -27,8 +27,6 @@
           </ul>
           <button class="header__button js-menu-button" type="button">
             <span class="header__button-line"></span>
-            <span class="header__button-line"></span>
-            <span class="header__button-line"></span>
           </button>
           <a class="header__logo link" href="/" aria-label="Логотип Седоны"></a>
         </nav>
@@ -56,75 +54,79 @@
               <ul class="review__list">
                 <li class="review__item">
                   <input class="review__input" id="first-name" type="text" name="first-name" placeholder="Петр">
-                  <label class="review__label" for="first-name">Имя*:</label>
+                  <label class="review__label review__label--reverse" for="first-name">Имя*:</label>
                 </li>
                 <li class="review__item">
                   <input class="review__input" id="last-name" type="text" name="last-name" placeholder="Иванов">
-                  <label class="review__label" for="last-name">Фамилия*:</label>
+                  <label class="review__label review__label--reverse" for="last-name">Фамилия*:</label>
                 </li>
                 <li class="review__item">
                   <input class="review__input" id="patronymic" type="text" name="patronymic" placeholder="Александрович">
-                  <label class="review__label" for="patronymic">Отчество:</label>
+                  <label class="review__label review__label--reverse" for="patronymic">Отчество:</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="review__fieldset">
               <legend class="review__legend">Контактная информация:</legend>
               <ul class="review__list">
-                <li class="review__item">
-                  <input class="review__input" id="tel" type="text" name="tel" placeholder="Введите телефон">
-                  <label class="review__label" for="tel">Контактный телефон*:</label>
+                <li class="review__item review__item--column">
+                  <div class="review__input-wrapper review__input-wrapper--tel">
+                    <input class="review__input" id="tel" type="text" name="tel" placeholder="Введите телефон">
+                  </div>
+                  <label class="review__label review__label--reverse" for="tel">Контактный телефон*:</label>
                 </li>
-                <li class="review__item">
-                  <input class="review__input" id="mail" type="text" name="mail" placeholder="Введите e-mail">
-                  <label class="review__label" for="mail">Электронная почта*:</label>
+                <li class="review__item review__item--column">
+                  <div class="review__input-wrapper review__input-wrapper--mail">
+                    <input class="review__input" id="mail" type="text" name="mail" placeholder="Введите e-mail">
+                  </div>
+                  <label class="review__label review__label--reverse" for="mail">Электронная почта*:</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="review__fieldset">
-              <legend class="review__legend">Ваше общее впечатление:</legend>
+              <legend class="review__legend review__legend--radio">Ваше общее впечатление:</legend>
               <ul class="review__list">
-                <li class="review__item">
-                  <input class="review__radio" id="positive-opinion" type="radio" name="positive-opinion" checked>
-                  <label class="review__label" for="positive-opinion">Скорее положительное</label>
+                <li class="review__item review__item--radio">
+                  <input class="review__radio visually-hidden" id="positive-opinion" type="radio" name="opinion" checked>
+                  <label class="review__label review__label--radio" for="positive-opinion">Скорее положительное</label>
                 </li>
-                <li class="review__item">
-                  <input class="review__radio" id="negative-opinion" type="radio" name="negative-opinion">
-                  <label class="review__label" for="negative-opinion">Скорее отрицательное</label>
+                <li class="review__item review__item--radio">
+                  <input class="review__radio visually-hidden" id="negative-opinion" type="radio" name="opinion">
+                  <label class="review__label review__label--radio" for="negative-opinion">Скорее отрицательное</label>
                 </li>
-                <li class="review__item">
-                  <input class="review__radio" id="difficult-answer" type="radio" name="difficult-answer">
-                  <label class="review__label" for="difficult-answer">Затрудняюсь ответить</label>
+                <li class="review__item review__item--radio">
+                  <input class="review__radio visually-hidden" id="difficult-answer" type="radio" name="opinion">
+                  <label class="review__label review__label--radio" for="difficult-answer">Затрудняюсь ответить</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="review__fieldset">
-              <legend class="review__legend">Посещенные достопримечательности:</legend>
+              <legend class="review__legend review__legend--checkbox">Посещенные достопримечательности:</legend>
               <ul class="review__list">
-                <li class="review__item">
-                  <input class="review__checkbox" id="bridge-of-devil" type="checkbox" name="bridge-of-devil" checked>
-                  <label class="review__label" for="bridge-of-devil">Мост Дьявола</label>
+                <li class="review__item review__item--checkbox">
+                  <input class="review__checkbox visually-hidden" id="bridge-of-devil" type="checkbox" name="bridge-of-devil" checked>
+                  <label class="review__label review__label--checkbox" for="bridge-of-devil">Мост Дьявола</label>
                 </li>
-                <li class="review__item">
-                  <input class="review__checkbox" id="mount-bell" type="checkbox" name="mount-bell" checked>
-                  <label class="review__label" for="mount-bell">Гора-Колокол</label>
+                <li class="review__item review__item--checkbox">
+                  <input class="review__checkbox visually-hidden" id="mount-bell" type="checkbox" name="mount-bell" checked>
+                  <label class="review__label review__label--checkbox" for="mount-bell">Гора-Колокол</label>
                 </li>
-                <li class="review__item">
-                  <input class="review__checkbox" id="slide-park" type="checkbox" name="slide-park" checked>
-                  <label class="review__label" for="slide-park">Слайд-парк</label>
+                <li class="review__item review__item--checkbox">
+                  <input class="review__checkbox visually-hidden" id="slide-park" type="checkbox" name="slide-park" checked>
+                  <label class="review__label review__label--checkbox" for="slide-park">Слайд-парк</label>
                 </li>
-                <li class="review__item">
-                  <input class="review__checkbox" id="red-rocks" type="checkbox" name="red-rocks">
-                  <label class="review__label" for="red-rocks">Красные скалы</label>
+                <li class="review__item review__item--checkbox">
+                  <input class="review__checkbox visually-hidden" id="red-rocks" type="checkbox" name="red-rocks">
+                  <label class="review__label review__label--checkbox" for="red-rocks">Красные скалы</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="review__fieldset">
-              <legend class="review__legend">Опишите свои эмоции:</legend>
+              <legend class="review__legend review__legend--textarea">Опишите свои эмоции:</legend>
               <ul class="review__list">
                 <li class="review__item">
                   <textarea class="review__textarea" id="textarea" name="textarea" placeholder="Опишите подробно все свои восторги"></textarea>
-                  <label class="review__label" for="textarea">Оставьте комментарий</label>
+                  <label class="review__label visually-hidden" for="textarea">Оставьте комментарий</label>
                 </li>
               </ul>
             </fieldset>
