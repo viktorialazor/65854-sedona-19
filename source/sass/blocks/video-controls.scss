@@ -1,8 +1,17 @@
 .video-controls {
-  max-width: 320px;
+  width: 100%;
   margin-top: -43px;
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    margin-top: -90px;
+    padding: 35px;
+
+    background-color: rgba($black, 0.6);
+  }
 }
 
 .video-controls__top {
@@ -11,6 +20,21 @@
   padding: 20px;
 
   background-color: rgba($black, 0.6);
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 95px;
+
+    width: 390px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 540px;
+  }
 }
 
 .video-controls__button {
@@ -39,6 +63,10 @@
 
   transition: background-color $transition-time;
 
+  @media (min-width: $tablet-width) {
+    left: 110px;
+  }
+
   &:hover,
   &:focus {
     background-color: rgba($white, 0.8);
@@ -58,6 +86,10 @@
   height: 3px;
 
   background-color: rgba($white, 0.2);
+
+  @media (min-width: $tablet-width) {
+    background-color: rgba($white, 0.3);
+  }
 }
 
 .video-controls__bottom {
@@ -66,6 +98,12 @@
   padding: 25px 20px;
 
   background-color: $lightest-gray;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    background-color: transparent;
+  }
 }
 
 .video-controls__button:not(.video-controls__thumb) {
@@ -73,9 +111,17 @@
 
   transition: color $transition-time;
 
+  @media (min-width: $tablet-width) {
+    color: $white;
+  }
+
   &:hover,
   &:focus {
     color: $darkest-gray;
+
+    @media (min-width: $tablet-width) {
+      color: rgba($white, 0.6);
+    }
   }
 
   &:focus {
@@ -84,6 +130,10 @@
 
   &:active {
     color: rgba($darkest-gray, 0.3);
+
+    @media (min-width: $tablet-width) {
+      color: rgba($white, 0.3);
+    }
   }
 }
 

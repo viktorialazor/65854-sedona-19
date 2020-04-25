@@ -16,11 +16,53 @@
   transition: opacity $transition-time;
 
   &--show {
-    position: initial;
+    position: static;
 
     visibility: visible;
 
     opacity: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: static;
+
+    display: flex;
+    visibility: visible;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    opacity: 1;
+  }
+}
+
+
+.navigation__item {
+  @media (min-width: $tablet-width) {
+    width: 20%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 25%;
+  }
+
+  &:nth-child(3) {
+    @media (min-width: $tablet-width) {
+      margin-left: auto;
+    }
+  }
+
+  &:first-child {
+    @media (min-width: $desktop-width) {
+      padding-left: 45px;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: $desktop-width) {
+      padding-right: 45px;
+    }
   }
 }
 
@@ -39,9 +81,40 @@
 
   transition: color $transition-time, background-color $transition-time;
 
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 26px;
+    color: $black;
+
+    background-color: $white;
+    box-shadow: none;
+  }
+
+  .navigation__item:first-child &,
+  .navigation__item:nth-child(2) & {
+    @media (min-width: $tablet-width) {
+      text-align: left;
+    }
+  }
+
+  .navigation__item:nth-child(3) &,
+  .navigation__item:last-child & {
+    @media (min-width: $tablet-width) {
+      text-align: right;
+    }
+  }
+
   &:hover,
   &:focus {
     background-color: $blue;
+
+    @media (min-width: $tablet-width) {
+      color: $light-blue;
+
+      background-color: transparent;
+    }
   }
 
   &:focus {
@@ -52,6 +125,12 @@
     color: rgba($white, 0.3);
 
     background-color: $dark-blue;
+
+    @media (min-width: $tablet-width) {
+      color: rgba($black, 0.3);
+
+      background-color: transparent;
+    }
   }
 
   &--active {
