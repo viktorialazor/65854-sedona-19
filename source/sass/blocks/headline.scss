@@ -9,6 +9,10 @@
   @include font();
 
   margin-top: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .headline__text {
