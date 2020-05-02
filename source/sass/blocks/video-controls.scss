@@ -4,6 +4,10 @@
   margin-right: auto;
   margin-left: auto;
 
+  @media (max-width: $mobile-width) {
+    max-width: 280px;
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
 
