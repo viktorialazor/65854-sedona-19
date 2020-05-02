@@ -1,20 +1,16 @@
 .review__inner {
-  max-width: 320px;
-  margin-right: auto;
-  margin-left: auto;
+  @include container($dw: 960px);
 
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    max-width: 768px;
     padding-right: 60px;
     padding-left: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1200px;
-    padding-right: 120px;
-    padding-left: 120px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

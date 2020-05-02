@@ -1,3 +1,18 @@
+@mixin container ($dw: 1200px) {
+  width: 100%;
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $dw;
+  }
+}
+
 @mixin font($fz: 18px, $lh: 26px, $fw: 700) {
   font-size: $fz;
   line-height: $lh;
