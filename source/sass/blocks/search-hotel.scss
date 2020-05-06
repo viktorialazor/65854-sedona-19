@@ -1,7 +1,7 @@
 .search-hotel__inner {
   @include container();
 
-  padding-top: 30px;
+  padding-top: 28px;
   padding-bottom: 50px;
 
   background-color: $white;
@@ -17,21 +17,30 @@
 }
 
 .search-hotel__headline {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    max-width: 460px;
+    max-width: 500px;
     margin-right: auto;
+    margin-bottom: 40px;
     margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
   }
 }
 
 .search-hotel .headline__title {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+
+  font-size: 21px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+
+    font-size: 30px;
   }
 }
 

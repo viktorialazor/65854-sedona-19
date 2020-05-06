@@ -53,6 +53,10 @@
 
     background-image: url("../img/text-sedona-index.svg");
     background-size: contain;
+
+    @media (min-width: $tablet-width) {
+      top: calc(50% - 7px);
+    }
   }
 }
 

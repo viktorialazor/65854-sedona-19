@@ -1,6 +1,6 @@
 .advantages-card {
   width: 100%;
-  padding: 30px 20px;
+  padding: 25px 20px 30px;
 
   color: $darkest-gray;
 
@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 0 40px;
+    padding: 45px 0 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -37,10 +37,16 @@
   color: $white;
 
   background-color: $light-blue;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 35px;
+  }
 }
 
 .advantages__item:first-child .advantages-card {
-  padding-top: 60px;
+  @media (max-width: $mobile-width) {
+    padding-top: 60px;
+  }
 }
 
 .advantages-card__title:not(.advantages-card--invert .advantages-card__title) {
@@ -51,11 +57,12 @@
   @include font();
 
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
-    max-width: 155px;
+    max-width: 150px;
     margin-right: auto;
+    margin-bottom: 10px;
     margin-left: auto;
 
     font-size: 21px;
@@ -65,10 +72,14 @@
 .advantages-card__number {
   display: block;
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .advantages-card__text {
-  max-width: 260px;
+  max-width: 250px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -77,6 +88,30 @@
 
   @media (min-width: $desktop-width) {
     max-width: 265px;
+  }
+
+  .advantages-card--invert & {
+    @media (max-width: $mobile-width) {
+      max-width: 270px;
+    }
+  }
+
+  .advantages__item:nth-child(4) & {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      max-width: 145px;
+    }
+  }
+
+  .advantages__item:nth-child(2) & {
+    @media (min-width: $desktop-width) {
+      max-width: 230px;
+    }
+  }
+
+  .advantages__item:nth-child(3) & {
+    @media (min-width: $desktop-width) {
+      max-width: 300px;
+    }
   }
 }
 

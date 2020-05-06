@@ -15,26 +15,36 @@
 }
 
 .photos__headline {
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 35px;
+  padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     max-width: 480px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 75px;
+    padding-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 100px;
+    padding-top: 110px;
     padding-bottom: 70px;
   }
 }
 
 .photos .headline__title {
+  margin-bottom: 25px;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+.photos .headline__text {
+  @media (max-width: $mobile-width) {
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
