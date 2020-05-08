@@ -1,9 +1,7 @@
 .navigation {
-  position: absolute;
   z-index: $z-index;
 
   display: block;
-  visibility: hidden;
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
@@ -11,30 +9,24 @@
 
   list-style: none;
 
-  opacity: 0;
-
   transition: opacity $transition-time;
 
-  &--show {
-    position: static;
+  &--hide {
+    @media (max-width: $mobile-width) {
+      position: absolute;
 
-    visibility: visible;
+      visibility: hidden;
 
-    opacity: 1;
+      opacity: 0;
+    }
   }
 
   @media (min-width: $tablet-width) {
-    position: static;
-
     display: flex;
-    visibility: visible;
     padding-right: 25px;
-    padding-left: 25px;
-
-    opacity: 1;
+    padding-left: 50px;
   }
 }
-
 
 .navigation__item {
   @media (min-width: $tablet-width) {
@@ -54,13 +46,23 @@
   }
 
   &:first-child {
+    @media (min-width: $tablet-width) {
+      width: 19%;
+    }
+
     @media (min-width: $desktop-width) {
+      width: 23%;
       padding-left: 45px;
     }
   }
 
   &:last-child {
+    @media (min-width: $tablet-width) {
+      margin-left: 12px;
+    }
+
     @media (min-width: $desktop-width) {
+      margin-left: 0;
       padding-right: 45px;
     }
   }
@@ -71,7 +73,7 @@
 
   display: inline-block;
   width: 100%;
-  padding: 10px;
+  padding: 8px 10px;
 
   text-align: center;
   color: $white;

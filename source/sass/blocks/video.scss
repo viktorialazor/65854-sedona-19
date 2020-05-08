@@ -1,23 +1,25 @@
 .video__inner {
   @include container();
 
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 
   background-color: $white;
 
   @media (min-width: $tablet-width) {
     padding-right: 60px;
+    padding-bottom: 45px;
     padding-left: 60px;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 0;
+    padding-bottom: 90px;
     padding-left: 0;
   }
 }
 
 .video__headline {
-  padding-top: 40px;
+  padding-top: 35px;
   padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
@@ -25,13 +27,23 @@
     margin-right: auto;
     margin-left: auto;
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 68px;
   }
 }
 
 .video .headline__title {
+  margin-bottom: 25px;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+.video .headline__text {
+  @media (max-width: $mobile-width) {
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
