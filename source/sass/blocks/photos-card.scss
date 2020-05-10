@@ -65,7 +65,7 @@
       padding-right: 35px;
     }
 
-    @media (max-width: $desktop-width - 1) and (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
       background-color: $grey;
     }
   }

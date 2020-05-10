@@ -23,9 +23,3 @@
 
   color: $darkest-gray;
 }
-
-.headline__text br {
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
-}

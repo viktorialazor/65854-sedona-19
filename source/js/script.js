@@ -1,13 +1,17 @@
-var button = document.querySelector(".js-menu-button");
-var navigation = document.querySelector(".js-navigation");
+function headerMenu() {
+  var headerButton = document.querySelector(".js-menu-button");
+  var headerNavigation = document.querySelector(".js-navigation");
 
-navigation.classList.add("navigation--hide");
-button.classList.remove("header__button--hide");
-button.classList.add("header__button--closed");
+  headerNavigation.classList.add("navigation--hide");
+  headerButton.classList.remove("header__button--hide");
+  headerButton.classList.add("header__button--closed");
 
-button.addEventListener("click", function(evt){
-  evt.preventDefault();
+  headerButton.addEventListener("click", function(evt){
+    evt.preventDefault();
 
-  navigation.classList.toggle("navigation--hide");
-  button.classList.toggle("header__button--closed");
-});
+    headerNavigation.classList.toggle("navigation--hide");
+    headerButton.classList.toggle("header__button--closed");
+  });
+};
+
+headerMenu();

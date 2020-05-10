@@ -34,5 +34,6 @@ $transition-time: 0.3s;
 // Width
 
 $desktop-width: 1200px;
+$max-tablet-width: $desktop-width -1;
 $tablet-width: 768px;
 $mobile-width: $tablet-width - 1;
