@@ -97,7 +97,7 @@
   }
 
   .advantages__item:nth-child(4) & {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
       max-width: 145px;
     }
   }

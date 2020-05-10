@@ -247,14 +247,8 @@
   }
 
   .advantages__additional-item:last-child & {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
       max-width: 155px;
     }
-  }
-}
-
-.advantages__additional-text br {
-  @media (max-width: $desktop-width - 1) {
-    display: none;
   }
 }
