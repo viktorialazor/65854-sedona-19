@@ -28,7 +28,13 @@
           <button class="header__button header__button--hide js-menu-button" type="button" aria-label="Открыть меню">
             <span class="header__button-line"></span>
           </button>
-          <a class="header__logo link" aria-label="Логотип Седоны"></a>
+          <a class="header__logo link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="header__logo-image image-fluid" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
+            </picture>
+          </a>
         </nav>
       </div>
     </header>
@@ -37,7 +43,11 @@
         <div class="index-banner__inner">
           <h2 class="visually-hidden">Баннер</h2>
           <div class="index-banner__image-wrapper">
-            <img class="index-banner__image image-fluid" src="img/bg-back-desktop@1x.jpg" width="1200" height="518" alt="Виды Седоны">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-back-tablet@1x.jpg 1x, img/bg-back-tablet@2x.jpg 2x">
+              <img class="index-banner__image image-fluid" src="img/bg-back-mobile@1x.jpg" srcset="img/bg-back-mobile@2x.jpg 2x" alt="Виды Седоны">
+            </picture>
           </div>
         </div>
       </section>
@@ -54,7 +64,11 @@
                 <span class="advantages-card__number">— №1 —</span>
                 <p class="advantages-card__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
-              <img class="advantages-card__image image-fluid" src="img/main-city-desktop@1x.jpg" alt="Вид улицы Седоны">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+                <img class="advantages-card__image image-fluid" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Вид улицы Седоны">
+              </picture>
               <ul class="advantages__additional">
                 <li class="advantages__additional-item">
                   <h2 class="advantages__additional-title advantages__additional-title--house">Жилье</h2>
@@ -76,7 +90,11 @@
                 <span class="advantages-card__number">— №2 —</span>
                 <p class="advantages-card__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <img class="advantages-card__image image-fluid" src="img/main-bridge-desktop@1x.jpg" alt="Мост дьявола в Седоне">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+                <img class="advantages-card__image image-fluid" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост дьявола в Седоне">
+              </picture>
             </li>
             <li class="advantages__item">
               <div class="advantages__card advantages-card">
@@ -138,6 +156,11 @@
         </a>
       </div>
     </footer>
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

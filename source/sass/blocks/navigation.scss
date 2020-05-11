@@ -137,6 +137,8 @@
 
   &--active {
     color: $brown;
+
+    pointer-events: none;
   }
 
   &--active:hover,
