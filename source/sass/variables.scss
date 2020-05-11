@@ -37,3 +37,8 @@ $desktop-width: 1200px;
 $max-tablet-width: $desktop-width -1;
 $tablet-width: 768px;
 $mobile-width: $tablet-width - 1;
+
+// Retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
