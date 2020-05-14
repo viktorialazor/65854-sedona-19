@@ -48,6 +48,10 @@
           <h2 class="visually-hidden">Баннер</h2>
           <div class="inner-banner__image-wrapper">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-back-desktop@1x.webp 1x, img/bg-back-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-back-tablet@1x.webp 1x, img/bg-back-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-back-mobile@1x.webp 1x, img/bg-back-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/bg-back-tablet@1x.jpg 1x, img/bg-back-tablet@2x.jpg 2x">
               <img class="inner-banner__image image-fluid" src="img/bg-back-mobile@1x.jpg" srcset="img/bg-back-mobile@2x.jpg 2x" alt="Виды Седоны">
@@ -65,6 +69,10 @@
             <li class="photos__item photos__item--wide">
               <div class="photos__card photos-card">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
                   <img class="photos-card__image image-fluid" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Просторы Седоны">
@@ -74,13 +82,17 @@
                     <strong class="photos-card__title">Неродные просторы</strong>
                     <p class="photos-card__author">Автор фото: <span class="photos-card__author-name">Борис</span></p>
                   </div>
-                  <span class="photos-card__rating"><svg class="photos-card__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"><path fill="currentColor" d="M12.38 3.65l-.63 2.92L11.22 9h8.68v2.06L17 18H8V8l4.37-4.36M13.2 0L6.6 6.6A1.68 1.68 0 006 8v10a2 2 0 002 2h9a2 2 0 001.8-1.2l3-7.1a1.7 1.7 0 00.1-.7V9h.1a2 2 0 00-2-2h-6.3l1-4.6v-.3a2.1 2.1 0 00-.4-1.1l-1.1-1zM4 8H0v12h4V8zm18 1z"/></svg> 1350</span>
+                  <span class="photos-card__rating"><svg class="photos-card__icon svg-icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg> 1350</span>
                 </div>
               </div>
             </li>
             <li class="photos__item">
               <div class="photos__card photos-card">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
                   <img class="photos-card__image image-fluid" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Растительность Седоны">
@@ -90,13 +102,17 @@
                     <strong class="photos-card__title">Местная растительность</strong>
                     <p class="photos-card__author">Автор фото: <span class="photos-card__author-name">Сергей</span></p>
                   </div>
-                  <span class="photos-card__rating"><svg class="photos-card__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"><path fill="currentColor" d="M12.38 3.65l-.63 2.92L11.22 9h8.68v2.06L17 18H8V8l4.37-4.36M13.2 0L6.6 6.6A1.68 1.68 0 006 8v10a2 2 0 002 2h9a2 2 0 001.8-1.2l3-7.1a1.7 1.7 0 00.1-.7V9h.1a2 2 0 00-2-2h-6.3l1-4.6v-.3a2.1 2.1 0 00-.4-1.1l-1.1-1zM4 8H0v12h4V8zm18 1z"/></svg> 143</span>
+                  <span class="photos-card__rating"><svg class="photos-card__icon svg-icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg> 143</span>
                 </div>
               </div>
             </li>
             <li class="photos__item">
               <div class="photos__card photos-card">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
                   <img class="photos-card__image image-fluid" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север в Седоне">
@@ -106,13 +122,17 @@
                     <strong class="photos-card__title">Дорога на север</strong>
                     <p class="photos-card__author">Автор фото: <span class="photos-card__author-name">Петр</span></p>
                   </div>
-                  <span class="photos-card__rating"><svg class="photos-card__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"><path fill="currentColor" d="M12.38 3.65l-.63 2.92L11.22 9h8.68v2.06L17 18H8V8l4.37-4.36M13.2 0L6.6 6.6A1.68 1.68 0 006 8v10a2 2 0 002 2h9a2 2 0 001.8-1.2l3-7.1a1.7 1.7 0 00.1-.7V9h.1a2 2 0 00-2-2h-6.3l1-4.6v-.3a2.1 2.1 0 00-.4-1.1l-1.1-1zM4 8H0v12h4V8zm18 1z"/></svg> 96</span>
+                  <span class="photos-card__rating"><svg class="photos-card__icon svg-icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg> 96</span>
                 </div>
               </div>
             </li>
             <li class="photos__item">
               <div class="photos__card photos-card">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
                   <img class="photos-card__image image-fluid" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола в Седоне">
@@ -122,7 +142,7 @@
                     <strong class="photos-card__title">Мост дьявола</strong>
                     <p class="photos-card__author">Автор фото: <span class="photos-card__author-name">Антон</span></p>
                   </div>
-                  <span class="photos-card__rating"><svg class="photos-card__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"><path fill="currentColor" d="M12.38 3.65l-.63 2.92L11.22 9h8.68v2.06L17 18H8V8l4.37-4.36M13.2 0L6.6 6.6A1.68 1.68 0 006 8v10a2 2 0 002 2h9a2 2 0 001.8-1.2l3-7.1a1.7 1.7 0 00.1-.7V9h.1a2 2 0 00-2-2h-6.3l1-4.6v-.3a2.1 2.1 0 00-.4-1.1l-1.1-1zM4 8H0v12h4V8zm18 1z"/></svg> 254</span>
+                  <span class="photos-card__rating"><svg class="photos-card__icon svg-icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg> 254</span>
                 </div>
               </div>
             </li>
@@ -180,14 +200,15 @@
         </ul>
         <a class="footer__dev link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="footer__dev-text">Разработано</span>
-          <svg class="footer__dev-svg svg-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34">
-            <defs/>
-            <path fill="currentColor" d="M13.65 0h-.15L0 1.41V26l13.5 8L27 26V1.41zm11.42 12.09L13.52 5.32v-.1h-.09l-.08-.06v.11L1.93 12.09V3.14L13.5 1.93l11.57 1.21v9zM13.43 6.77L25 13.46l-4.51 2.64-7.11-4.21v1.41l5.92 3.5-.86.51-5-3v1.42L17.2 18l-.78.53-3-1.79v1.41l1.86 1.09-1.8 1.08L2 13.59zm-11.5 8.32l11.43 6.77v1l-8-4.71v1.45l8 4.78v1.07l-8-4.72v1.41l8 4.81h.05l8.16-4.86V17l3.42-2v10L13.5 31.77 1.93 24.91z"/>
+          <svg class="footer__dev-svg svg-icon" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </footer>
     <script src="js/picturefill.js"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script>
     <script src="js/script.js"></script>
   </body>
 </html>

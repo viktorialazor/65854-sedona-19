@@ -134,8 +134,11 @@
 }
 
 .header__logo-image {
+  display: block;
   width: 102px;
   height: 83px;
+  margin-right: auto;
+  margin-left: auto;
 
   object-fit: contain;
   object-position: center;
