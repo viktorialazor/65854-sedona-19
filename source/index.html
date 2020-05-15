@@ -48,6 +48,10 @@
           <h2 class="visually-hidden">Баннер</h2>
           <div class="index-banner__image-wrapper">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-back-desktop@1x.webp 1x, img/bg-back-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-back-tablet@1x.webp 1x, img/bg-back-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-back-mobile@1x.webp 1x, img/bg-back-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/bg-back-tablet@1x.jpg 1x, img/bg-back-tablet@2x.jpg 2x">
               <img class="index-banner__image image-fluid" src="img/bg-back-mobile@1x.jpg" srcset="img/bg-back-mobile@2x.jpg 2x" alt="Виды Седоны">
@@ -69,6 +73,10 @@
                 <p class="advantages-card__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
                 <img class="advantages-card__image image-fluid" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Вид улицы Седоны">
@@ -95,6 +103,10 @@
                 <p class="advantages-card__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
                 <img class="advantages-card__image image-fluid" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост дьявола в Седоне">
@@ -153,14 +165,15 @@
         </ul>
         <a class="footer__dev link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="footer__dev-text">Разработано</span>
-          <svg class="footer__dev-svg svg-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34">
-            <defs/>
-            <path fill="currentColor" d="M13.65 0h-.15L0 1.41V26l13.5 8L27 26V1.41zm11.42 12.09L13.52 5.32v-.1h-.09l-.08-.06v.11L1.93 12.09V3.14L13.5 1.93l11.57 1.21v9zM13.43 6.77L25 13.46l-4.51 2.64-7.11-4.21v1.41l5.92 3.5-.86.51-5-3v1.42L17.2 18l-.78.53-3-1.79v1.41l1.86 1.09-1.8 1.08L2 13.59zm-11.5 8.32l11.43 6.77v1l-8-4.71v1.45l8 4.78v1.07l-8-4.72v1.41l8 4.81h.05l8.16-4.86V17l3.42-2v10L13.5 31.77 1.93 24.91z"/>
+          <svg class="footer__dev-svg svg-icon" width="27" height="34">
+            <use xlink:href="./img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </footer>
     <script src="js/picturefill.js"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script>
     <script src="js/script.js"></script>
   </body>
 </html>
