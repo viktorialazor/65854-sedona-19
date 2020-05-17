@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Фото и видео Седоны</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
   </head>
   <body class="page">
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header">
       <div class="header__inner">
         <nav class="header__navigation">
@@ -82,7 +85,7 @@
                     <strong class="photos-card__title">Неродные просторы</strong>
                     <p class="photos-card__author">Автор фото: <span class="photos-card__author-name">Борис</span></p>
                   </div>
-                  <span class="photos-card__rating" aria-label="Лайков 1350"><svg class="photos-card__icon svg-icon" width="22" height="20" aria-hidden="true" focusable="false"><use xlink:href="img/sprite.svg#icon-like"></use></svg> 1350</span>
+                  <span class="photos-card__rating" aria-label="Лайков 1350"><svg class="photos-card__icon svg-icon" width="22" height="20" aria-hidden="true" focusable="false"><use xlink:href="#inline-icon-like"></use></svg> 1350</span>
                 </div>
               </div>
             </li>
@@ -102,7 +105,7 @@
                     <strong class="photos-card__title">Местная растительность</strong>
                     <p class="photos-card__author">Автор фото: <span class="photos-card__author-name">Сергей</span></p>
                   </div>
-                  <span class="photos-card__rating" aria-label="Лайков 143"><svg class="photos-card__icon svg-icon" width="22" height="20" aria-hidden="true" focusable="false"><use xlink:href="img/sprite.svg#icon-like"></use></svg> 143</span>
+                  <span class="photos-card__rating" aria-label="Лайков 143"><svg class="photos-card__icon svg-icon" width="22" height="20" aria-hidden="true" focusable="false"><use xlink:href="#inline-icon-like"></use></svg> 143</span>
                 </div>
               </div>
             </li>
@@ -122,7 +125,7 @@
                     <strong class="photos-card__title">Дорога на север</strong>
                     <p class="photos-card__author">Автор фото: <span class="photos-card__author-name">Петр</span></p>
                   </div>
-                  <span class="photos-card__rating" aria-label="Лайков 96"><svg class="photos-card__icon svg-icon" width="22" height="20" aria-hidden="true" focusable="false"><use xlink:href="img/sprite.svg#icon-like"></use></svg> 96</span>
+                  <span class="photos-card__rating" aria-label="Лайков 96"><svg class="photos-card__icon svg-icon" width="22" height="20" aria-hidden="true" focusable="false"><use xlink:href="#inline-icon-like"></use></svg> 96</span>
                 </div>
               </div>
             </li>
@@ -142,7 +145,7 @@
                     <strong class="photos-card__title">Мост дьявола</strong>
                     <p class="photos-card__author">Автор фото: <span class="photos-card__author-name">Антон</span></p>
                   </div>
-                  <span class="photos-card__rating" aria-label="Лайков 254"><svg class="photos-card__icon svg-icon" width="22" height="20" aria-hidden="true" focusable="false"><use xlink:href="img/sprite.svg#icon-like"></use></svg> 254</span>
+                  <span class="photos-card__rating" aria-label="Лайков 254"><svg class="photos-card__icon svg-icon" width="22" height="20" aria-hidden="true" focusable="false"><use xlink:href="#inline-icon-like"></use></svg> 254</span>
                 </div>
               </div>
             </li>
@@ -169,17 +172,17 @@
               <div class="video-controls__bottom">
                 <button class="video-controls__replay video-controls__button" type="button" aria-label="Повтор видео">
                   <svg class="video-controls__icon svg-icon" width="16" height="20" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite.svg#icon-replay"></use>
+                    <use xlink:href="#inline-icon-replay"></use>
                   </svg>
                 </button>
                 <button class="video-controls__subtitles video-controls__button" type="button" aria-label="Субтитры">
                   <svg class="video-controls__icon svg-icon" width="32" height="20" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite.svg#icon-subtitles"></use>
+                    <use xlink:href="#inline-icon-subtitles"></use>
                   </svg>
                 </button>
                 <button class="video-controls__fullscreen video-controls__button" type="button" aria-label="Полноэкранный режим">
                   <svg class="video-controls__icon svg-icon" width="20" height="20" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite.svg#icon-fullscreen"></use>
+                    <use xlink:href="#inline-icon-fullscreen"></use>
                   </svg>
                 </button>
               </div>
@@ -201,14 +204,12 @@
         <a class="footer__dev link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Интенсив HTML Academy">
           <span class="footer__dev-text">Разработано</span>
           <svg class="footer__dev-svg svg-icon" width="27" height="34" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+            <use xlink:href="#inline-icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </footer>
     <script src="js/picturefill.js"></script>
-    <script src="js/svg4everybody.js"></script>
-    <script>svg4everybody(); // run it now or whenever you are ready</script>
     <script src="js/script.js"></script>
   </body>
 </html>
