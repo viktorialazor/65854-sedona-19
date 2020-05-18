@@ -15,6 +15,10 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var cheerio = require("gulp-cheerio");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
+var pipeline = require("readable-stream").pipeline;
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -31,8 +35,23 @@ gulp.task("css", function () {
   .pipe(server.stream());
   });
 
+gulp.task("compressjs", function () {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: ".min"
+      }))
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("sprite", function () {
   return gulp.src("source/img/inline-*.svg")
+  .pipe(cheerio({
+    run: function ($) {
+      $('[fill]').attr('fill', 'currentColor');
+      },
+      parserOptions: { xmlMode: true }
+      }))
   .pipe(svgstore({
     inlineSvg: true
     }))
@@ -45,6 +64,7 @@ gulp.task("html", function () {
   .pipe(posthtml([
     include()
     ]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"));
   });
 
@@ -52,16 +72,16 @@ gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true}),
+    imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
     ]))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
   });
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
   });
 
 gulp.task("server", function () {
@@ -86,8 +106,6 @@ gulp.task("refresh", function (done) {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
     "source/*.ico"
     ], {
       base: "source"
@@ -103,8 +121,11 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "images",
+  "webp",
   "sprite",
-  "html"
+  "html",
+  "compressjs"
   ));
 
 gulp.task("start", gulp.series("build", "server"));
