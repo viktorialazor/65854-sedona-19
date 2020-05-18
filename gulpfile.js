@@ -18,7 +18,6 @@ var del = require("del");
 var cheerio = require("gulp-cheerio");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
-var pipeline = require("readable-stream").pipeline;
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -46,15 +45,16 @@ gulp.task("compressjs", function () {
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/inline-*.svg")
-  .pipe(cheerio({
-    run: function ($) {
-      $('[fill]').attr('fill', 'currentColor');
-      },
-      parserOptions: { xmlMode: true }
-      }))
   .pipe(svgstore({
     inlineSvg: true
     }))
+  .pipe(cheerio({
+    run: function ($) {
+      $("[fill]").removeAttr("fill");
+      $("svg").addClass("visually-hidden");
+      },
+      parserOptions: { xmlMode: true }
+      }))
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("build/img"));
   });
