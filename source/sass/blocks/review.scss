@@ -596,7 +596,7 @@
   }
 
   &:hover::before,
-  &:focus::before {
+  .review__radio:hover + &::before {
     background-color: $gray;
   }
 
@@ -604,11 +604,13 @@
     outline: none;
   }
 
-  &:active::before {
+  &:active::before,
+  .review__radio:focus + &::before {
     background-color: $dark-gray;
   }
 
-  .review__radio:checked + &:active::after {
+  .review__radio:checked + &:active::after,
+  .review__radio:checked:focus + &::after {
     background-color: rgba($darkest-gray, 0.3);
   }
 }
@@ -658,7 +660,7 @@
   }
 
   &:hover::before,
-  &:focus::before {
+  .review__checkbox:hover + &::before {
     background-color: $gray;
   }
 
@@ -666,11 +668,13 @@
     outline: none;
   }
 
-  &:active::before {
+  &:active::before,
+  .review__checkbox:focus + &::before {
     background-color: $dark-gray;
   }
 
-  .review__checkbox:checked + &:active::after {
+  .review__checkbox:checked + &:active::after,
+  .review__checkbox:checked:focus + &::after {
     opacity: 0.3;
   }
 }
