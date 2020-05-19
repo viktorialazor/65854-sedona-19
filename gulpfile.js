@@ -27,6 +27,8 @@ gulp.task("css", function () {
   .pipe(postcss([
     autoprefixer()
     ]))
+  .pipe(sourcemap.write("."))
+  .pipe(gulp.dest("build/css"))
   .pipe(csso())
   .pipe(rename("style.min.css"))
   .pipe(sourcemap.write("."))
@@ -95,6 +97,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.scss", gulp.series("css"));
   gulp.watch("source/img/inline-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("compressjs", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   });
 
@@ -105,6 +108,8 @@ gulp.task("refresh", function (done) {
 
 gulp.task("copy", function () {
   return gulp.src([
+    "source/css/style.css",
+    "source/css/style.css.map",
     "source/fonts/**/*.{woff,woff2}",
     "source/*.ico"
     ], {

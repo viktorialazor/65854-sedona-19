@@ -31,7 +31,7 @@
               <a class="navigation__link link" href="">HTML academy</a>
             </li>
           </ul>
-          <button class="header__button js-menu-button" type="button" aria-label="Открыть меню">
+          <button class="header__button header__button--hide js-menu-button" type="button" aria-label="Открыть меню">
             <span class="header__button-line"></span>
           </button>
           <a class="header__logo link" href="/" aria-label="Ссылка на Главную страницу Седоны">
@@ -67,7 +67,7 @@
             <p class="headline__title">Оставьте свой отзыв</p>
             <h1 class="headline__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</h1>
           </div>
-          <form class="review__form" action="https://echo.htmlacademy.ru" method="POST">
+          <form class="review__form js-form" action="https://echo.htmlacademy.ru" method="POST">
             <h2 class="visually-hidden">Форма отзыва</h2>
             <fieldset class="review__fieldset review__fieldset--introduce">
               <legend class="review__legend review__legend--introduce">Представьтесь:</legend>
@@ -91,13 +91,13 @@
               <ul class="review__list review__list--contacts">
                 <li class="review__item review__item--column">
                   <div class="review__input-wrapper review__input-wrapper--tel">
-                    <input class="review__input" id="tel" type="text" name="tel" placeholder="Введите телефон">
+                    <input class="review__input" id="tel" type="tel" name="tel" placeholder="Введите телефон" required>
                   </div>
                   <label class="review__label review__label--reverse" for="tel"><span class="review__label-mobile-only">Контактный</span> телефон*:</label>
                 </li>
                 <li class="review__item review__item--column">
                   <div class="review__input-wrapper review__input-wrapper--mail">
-                    <input class="review__input" id="mail" type="text" name="mail" placeholder="Введите e-mail">
+                    <input class="review__input" id="mail" type="email" name="mail" placeholder="Введите e-mail" required>
                   </div>
                   <label class="review__label review__label--reverse" for="mail">Электронная почта*:</label>
                 </li>
@@ -151,7 +151,7 @@
               </ul>
             </fieldset>
             <div class="review__bottom">
-              <button class="review__button button" type="submit">Отправить отзыв</button>
+              <button class="review__button button js-form-button" type="submit">Отправить отзыв</button>
               <span class="review__notice">* — обязательные поля</span>
             </div>
           </form>
@@ -176,6 +176,26 @@
         </a>
       </div>
     </footer>
+    <section class="pop-up pop-up--success js-pop-up-success">
+      <div class="pop-up__inner">
+        <div class="pop-up__headline">
+          <h2 class="pop-up__title">Ваш отзыв отправлен!</h2>
+          <p class="pop-up__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+        <div class="pop-up__bottom">
+          <button class="pop-up__button button js-close-success" type="button">Закрыть окно</button>
+        </div>
+      </div>
+    </section>
+    <section class="pop-up pop-up--error js-pop-up-error">
+      <div class="pop-up__inner">
+        <div class="pop-up__headline">
+          <h2 class="pop-up__title">Что-то пошло не так!</h2>
+          <p class="pop-up__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+        <button class="pop-up__button button js-close-error" type="button">Ok</button>
+      </div>
+    </section>
     <script src="js/picturefill.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>

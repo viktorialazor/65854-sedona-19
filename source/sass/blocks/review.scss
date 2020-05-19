@@ -532,6 +532,11 @@
   color: $black;
 }
 
+.error,
+.error:focus {
+  outline: 2px solid $red;
+}
+
 .review__label {
   margin-right: 15px;
 

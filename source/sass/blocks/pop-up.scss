@@ -1,0 +1,143 @@
+.pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+
+  width: 100%;
+
+  &--show {
+    display: block;
+  }
+}
+
+.pop-up__inner {
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 45px;
+
+  text-align: center;
+
+  background-color: $white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
+}
+
+.pop-up--success .pop-up__inner {
+  @media (min-width: $tablet-width) {
+    width: 640px;
+  }
+}
+
+.pop-up--error .pop-up__inner {
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+  }
+}
+
+.pop-up__headline {
+  width: 215px;
+  margin-right: auto;
+  margin-left: auto;
+
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 415px;
+  }
+}
+
+.pop-up--success .pop-up__headline {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 415px;
+  }
+}
+
+.pop-up--error .pop-up__headline {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+    margin-bottom: 35px;
+  }
+}
+
+.pop-up__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+
+    font-size: 30px;
+  }
+}
+
+.pop-up__text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $darkest-gray;
+}
+
+.pop-up--error .pop-up__title {
+  width: 220px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    line-height: 40px;
+  }
+}
+
+.pop-up__bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: $lightest-gray;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
+.pop-up__button {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pop-up--success .pop-up__button {
+  width: 300px;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+  }
+}
+
+.pop-up--error .pop-up__button {
+  width: 180px;
+
+  @media (min-width: $tablet-width) {
+    width: 272px;
+
+    line-height: 40px;
+  }
+}
